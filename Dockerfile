@@ -8,4 +8,5 @@ RUN set -ex \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone
 
+ONBUILD COPY ./html/ /var/www/html/
 WORKDIR /var/www/html
